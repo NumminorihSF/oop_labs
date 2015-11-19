@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import ru.kpetryaev.scene.*?>
+<fx:root hgap="10.0" layoutX="1.0" layoutY="1.0" type="javafx.scene.layout.GridPane" vgap="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" vgrow="NEVER" />
+        <RowConstraints minHeight="10.0" vgrow="NEVER" />
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+        <GridPane alignment="CENTER_LEFT" hgap="10.0" vgap="10.0" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.valignment="TOP" GridPane.vgrow="NEVER">
+            <columnConstraints>
+                <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints />
+            </rowConstraints>
+            <children>
+                <Label text="Высота" />
+                <IntegerField fx:id="heightField" GridPane.columnIndex="1" />
+            </children>
+            <GridPane.margin>
+                <Insets left="10.0" />
+            </GridPane.margin>
+        </GridPane>
+        <GridPane alignment="CENTER_LEFT" hgap="10.0" vgap="10.0" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP" GridPane.vgrow="NEVER">
+            <columnConstraints>
+                <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints />
+            </rowConstraints>
+            <children>
+                <Label text="Ширина" />
+                <IntegerField fx:id="widthField" GridPane.columnIndex="1" />
+            </children>
+            <GridPane.margin>
+                <Insets left="10.0" />
+            </GridPane.margin>
+        </GridPane>
+        <AnchorPane GridPane.rowIndex="2">
+            <children>
+                <GridPane alignment="center" hgap="10.0" vgap="10.0">
+                    <columnConstraints>
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints />
+                    </rowConstraints>
+                    <children>
+                        <IntegerFieldTable fx:id="firstTable" GridPane.columnIndex="0" />
+                        <Label text="+" GridPane.columnIndex="1">
+                            <font>
+                                <Font name="System Bold" size="24.0" />
+                            </font>
+                        </Label>
+                        <IntegerFieldTable fx:id="secondTable" GridPane.columnIndex="2" />
+                        <Label text="=" GridPane.columnIndex="3">
+                            <font>
+                                <Font name="System Bold" size="24.0" />
+                            </font>
+                        </Label>
+                        <IntegerFieldTable fx:id="resultTable" GridPane.columnIndex="5" />
+                    </children>
+                </GridPane>
+            </children>
+        </AnchorPane>
+    </children>
+</fx:root>

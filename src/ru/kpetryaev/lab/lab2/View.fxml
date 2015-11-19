@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<GridPane fx:controller="ru.kpetryaev.lab.lab2.Presenter"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+    <padding>
+        <Insets top="25" right="25" bottom="10" left="25"/>
+    </padding>
+    <Text text="Давайте решим уравнение вида Ax^2 + Bx + C = 0"
+          GridPane.columnIndex="0" GridPane.rowIndex="0"
+          GridPane.columnSpan="2"/>
+
+    <Label text="A="
+           GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+
+    <TextField fx:id="a"
+               GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+    <Label text="B="
+           GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+
+    <TextField fx:id="b"
+               GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+    <Label text="C="
+           GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+
+    <TextField fx:id="c"
+               GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+    <Button text="Рассчитать"
+            onAction="#handleSolve"
+            GridPane.columnIndex="0" GridPane.rowIndex="4"
+            GridPane.columnSpan="2" />
+
+    <TextArea fx:id="result" text=""
+              GridPane.columnIndex="2" GridPane.rowIndex="1"
+              GridPane.rowSpan="4"/>
+</GridPane>

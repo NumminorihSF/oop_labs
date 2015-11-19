@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import ru.kpetryaev.scene.GoodTable?>
+<?import ru.kpetryaev.scene.IntegerField?>
+<fx:root hgap="10.0" layoutX="1.0" layoutY="1.0" type="javafx.scene.layout.GridPane" vgap="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" vgrow="NEVER" />
+        <RowConstraints minHeight="10.0" vgrow="NEVER" />
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+        <GridPane alignment="CENTER_LEFT" hgap="10.0" vgap="10.0" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.valignment="TOP" GridPane.vgrow="NEVER">
+            <columnConstraints>
+                <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints />
+            </rowConstraints>
+            <children>
+                <Label text="Количество товаров" />
+                <IntegerField fx:id="capacity" GridPane.columnIndex="1" />
+            </children>
+            <GridPane.margin>
+                <Insets left="10.0" />
+            </GridPane.margin>
+        </GridPane>
+        <GridPane alignment="CENTER_LEFT" hgap="10.0" vgap="10.0" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP" GridPane.vgrow="NEVER">
+            <columnConstraints>
+                <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints />
+            </rowConstraints>
+            <children>
+               <GoodTable fx:id="table"/>
+            </children>
+            <GridPane.margin>
+                <Insets left="10.0" />
+            </GridPane.margin>
+        </GridPane>
+            <PieChart fx:id="chart" prefHeight="500" prefWidth="500" legendSide="RIGHT"
+                    title="Доли продаж по товарам"  labelLineLength="10" GridPane.rowIndex="2"/>
+    </children>
+</fx:root>
